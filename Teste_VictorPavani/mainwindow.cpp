@@ -3,6 +3,10 @@
 #include <QPixmap>
 #include <QFileDialog>
 #include <QFile>
+#include <QFormLayout>
+#include <QHBoxLayout>
+#include <QLineEdit>
+#include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,10 +24,17 @@ MainWindow:: ~MainWindow(){
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString filter="Imagens(*.JPG) ; (*.PNG) ; (*.BMP) ; (*.JPEG)";
+    QLabel *label = new QLabel();
+    ui->horizontalLayout->addWidget(label);
+    QString filter="Imagens(*.PNG) ; (*.JPEG)";
     QString opened=QFileDialog::getOpenFileName(this, "Selecionar Imagem", "C://", filter);
     QImage img(opened);
-    ui ->label-> setPixmap(QPixmap::fromImage(img.scaled(600,600,Qt::KeepAspectRatio)));
+    label->setPixmap(QPixmap::fromImage(img.scaled(600,600,Qt::KeepAspectRatio)));
 
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
 }
 
