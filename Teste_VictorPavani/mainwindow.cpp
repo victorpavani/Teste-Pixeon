@@ -7,6 +7,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QLabel>
+#include "pan.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,17 +25,30 @@ MainWindow:: ~MainWindow(){
 
 void MainWindow::on_pushButton_clicked()
 {
-    QLabel *label = new QLabel();
-    ui->horizontalLayout->addWidget(label);
-    QString filter="Imagens(*.PNG) ; (*.JPEG)";
-    QString opened=QFileDialog::getOpenFileName(this, "Selecionar Imagem", "C://", filter);
-    QImage img(opened);
-    label->setPixmap(QPixmap::fromImage(img.scaled(600,600,Qt::KeepAspectRatio)));
+
 
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
+}
+
+
+void MainWindow::on_actionPan_X_e_Y_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionNova_triggered()
+{
+    QLabel *label = new QLabel();
+    ui->verticalLayout_2->addWidget(label);
+    label->setFixedSize(300,300);
+    QString filter="Imagens(*.PNG) ; (*.JPEG)";
+    QString opened=QFileDialog::getOpenFileName(this, "Selecionar Imagem", "C://", filter);
+    QImage img(opened);
+    label->setPixmap(QPixmap::fromImage(img.scaled(300,300,Qt::KeepAspectRatio)));
 }
 

@@ -20,6 +20,10 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_actionPan_X_e_Y_triggered();
+
+    void on_actionNova_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

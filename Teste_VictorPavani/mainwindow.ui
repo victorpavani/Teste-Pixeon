@@ -15,11 +15,38 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
     <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>Adicionar Imagem</string>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
       </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>882</width>
+         <height>387</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>881</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2"/>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -33,8 +60,50 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuZoom_Escala">
+    <property name="title">
+     <string>Modificar Imagens</string>
+    </property>
+    <addaction name="actionPan_X_e_Y"/>
+    <addaction name="actionPan_X_e_Y_2"/>
+    <addaction name="actionRota_o"/>
+    <addaction name="actionBrilho_Contraste"/>
+   </widget>
+   <widget class="QMenu" name="menuAdicionar_Imagem">
+    <property name="title">
+     <string>Adicionar Imagem</string>
+    </property>
+    <addaction name="actionNova"/>
+   </widget>
+   <addaction name="menuZoom_Escala"/>
+   <addaction name="menuAdicionar_Imagem"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPan_X_e_Y">
+   <property name="text">
+    <string>Pan (X e Y)</string>
+   </property>
+  </action>
+  <action name="actionPan_X_e_Y_2">
+   <property name="text">
+    <string>Zoom (Escala)</string>
+   </property>
+  </action>
+  <action name="actionRota_o">
+   <property name="text">
+    <string>Rotação</string>
+   </property>
+  </action>
+  <action name="actionBrilho_Contraste">
+   <property name="text">
+    <string>Brilho/Contraste</string>
+   </property>
+  </action>
+  <action name="actionNova">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
